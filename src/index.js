@@ -1,4 +1,3 @@
 
-const rapper = `LOCO`;
-
-console.log(rapper);
+import './reset.css';
+import './style.css';
