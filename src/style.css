@@ -43,7 +43,7 @@ button {
   flex-flow: column;
 }
 
-.imajes {
+.image-main {
   background-color: var(--bg-color-02);
   width: 50rem;
   height: 20rem;
