@@ -1,4 +1,9 @@
-
+import beef from "../assets/images/beef-bour.jpeg";
+import salmon from "../assets/images/salmon.jpeg";
+import wildMus from "../assets/images/wild-mus.jpeg";
+import roastCi from "../assets/images/roast-ci.png";
+import mediTart from "../assets/images/medi-tart.jpg";
+import cremeB from "../assets/images/creme-b.jpg";
 
 export function meatPresent(content) {
 
@@ -73,14 +78,29 @@ export function meatPresent(content) {
     sugar crust on top.
     Served chilled with a side of fresh red berries
     – the perfect sweet finish to any meal.`
-  ]
+  ];
 
-  div1.append(minHeading1, para1);
-  div2.append(minHeading2, para2);
-  div3.append(minHeading3, para3);
-  div4.append(minHeading4, para4);
-  div5.append(minHeading5, para5);
-  div6.append(minHeading6, para6);
+  const image1 = document.createElement(`img`);
+  const image2 = document.createElement(`img`);
+  const image3 = document.createElement(`img`);
+  const image4 = document.createElement(`img`);
+  const image5 = document.createElement(`img`);
+  const image6 = document.createElement(`img`);
+  [image1.src, image2.src, image3.src, image4.src, image5.src, image6.src] = [
+    beef, salmon, wildMus, roastCi, mediTart, cremeB
+  ];
+  [image1.alt, image2.alt, image3.alt, image4.alt, image5.alt, image6.alt] = [
+    `Beef Bourguignon`, `Herb-Crusted Salmon`, `Wild Mushroom Risotto`,
+    `Country-Style Roast Chicken`, `Mediterranean Veggie Tart`,
+    `Classic Crème Brulée`
+  ];
+
+  div1.append(image1, minHeading1, para1);
+  div2.append(image2, minHeading2, para2);
+  div3.append(image3, minHeading3, para3);
+  div4.append(image4, minHeading4, para4);
+  div5.append(image5, minHeading5, para5);
+  div6.append(image6, minHeading6, para6);
 
   const footer = document.createElement(`div`);
   footer.className = `footer`

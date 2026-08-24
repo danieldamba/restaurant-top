@@ -1,3 +1,8 @@
+import danseoRestaurantImg from "../assets/images/danseo-resto.jpg";
+import warmAndF from "../assets/images/warm.jpg";
+import homeMade from "../assets/images/invitin.jpg";
+import kindPrice from "../assets/images/prices.png";
+
 
 export default function homePageLoader(content) {
 
@@ -11,8 +16,9 @@ export default function homePageLoader(content) {
   heroSection.className = `hero`;
 
   const divCont1 = document.createElement(`div`);
-  const divCont2 = document.createElement(`div`);
-  divCont2.className = `image-main`;
+  const danseoRImage = document.createElement(`img`);
+  danseoRImage.src = danseoRestaurantImg;
+  danseoRImage.className = `image-main`;
 
   const headingOne = document.createElement(`h1`);
   headingOne.textContent = `Danseo Restaurant`;
@@ -27,7 +33,7 @@ export default function homePageLoader(content) {
   bold spices.`;
 
   divCont1.append(headingOne, para1, para2);
-  heroSection.append(divCont1, divCont2);
+  heroSection.append(divCont1, danseoRImage);
 
   // h-section 
   const hSection = document.createElement(`div`);
@@ -37,6 +43,17 @@ export default function homePageLoader(content) {
   const divCont4 = document.createElement(`div`);
   const divCont5 = document.createElement(`div`);
   [divCont3, divCont4, divCont5].forEach((x) => x.className = `res-text`);
+
+  const warmAndFImage = document.createElement(`img`);
+  warmAndFImage.src = warmAndF;
+  const homeMadeImage = document.createElement(`img`);
+  homeMadeImage.src = homeMade;
+  const kindPriceImage = document.createElement(`img`);
+  kindPriceImage.src = kindPrice;
+  // [warmAndFImage, homeMade, kindPrice].forEach((x) => {
+  //   x.width = 300
+  //   x.height = 150
+  // })
 
   const minHeading1 = document.createElement(`h2`);
   const minHeading2 = document.createElement(`h2`);
@@ -62,9 +79,9 @@ export default function homePageLoader(content) {
     You leave full, satisfied, and smiling.`
   ];
 
-  divCont3.append(minHeading1, para3);
-  divCont4.append(minHeading2, para4);
-  divCont5.append(minHeading3, para5);
+  divCont3.append(warmAndFImage, minHeading1, para3);
+  divCont4.append(homeMadeImage, minHeading2, para4);
+  divCont5.append(kindPriceImage, minHeading3, para5);
   hSection.append(divCont3, divCont4, divCont5);
 
   // footer 

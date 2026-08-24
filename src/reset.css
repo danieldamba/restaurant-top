@@ -5,7 +5,7 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
-  scrollbar-width: 14px;
+  scrollbar-width: 10px;
   scrollbar-color: #868585 #ffffff;
   scrollbar-gutter: stable;
 }

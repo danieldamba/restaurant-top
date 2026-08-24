@@ -5,7 +5,7 @@ import test from "node:test";
 import watchFile  from "node:fs";
 
 export default {
-  mode: 'production',
+  mode: 'development',
   entry: './src/index.js',
 
   output: {

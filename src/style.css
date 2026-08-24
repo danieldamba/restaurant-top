@@ -1,10 +1,25 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("assets/fonts/OpenSans-Regular.woff") format("woff"),
+       url("assets/fonts/OpenSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-Regular.woff") format("woff"),
+       url("assets/fonts/OpenSans-Regular.woff2") format("woff2");
+}
+
 :root {
   --bg-color-01: rgb(151, 121, 100);
   --bg-color-02: rgb(158, 37, 0);
   --bg-color-03: rgb(245, 239, 236);
   --text-color-01: rgb(238, 232, 232);
   --text-color-02: rgb(102, 20, 0);
+  --head-font: "Open Sans";
+  --text-font: "Lato";
 }
+
 
 body {
   margin: 0;
@@ -12,6 +27,14 @@ body {
   display: flex;
   flex-flow: column;
   background-color: var(--bg-color-03);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--head-font);
+}
+
+p {
+  font-family: var(--text-font);
 }
 
 header {
@@ -64,22 +87,44 @@ button {
 .h-section {
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
   gap: 20px;
   padding: 20px;
 }
 
 .res-text {
   background-color: aliceblue;
-  width: 350px;
+  width: 900px;
+  height: 250px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 1px 1px 4px #9e2500;
+  display: grid;
+  grid-template: 75px 225px / 480px 320px;
+  grid-template-areas: 
+        "title img"
+        "para img";
+  gap: 20px;
+  justify-content: center;
+}
+
+.res-text p {
+  grid-area: para;
+}
+
+.rest-text img {
+  grid-area: img;
+}
+
+img {
+  border-radius: 20px;
 }
 
 .res-text h2 {
   font-size: 25px;
   border-bottom: 1px solid #181515;
   margin-bottom: 10px;
+  grid-area: title;
 }
 
 .footer {
@@ -125,9 +170,9 @@ button {
   flex-flow: column;
 }
 
-.about h1 {
+.about-content h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .about-text {
